@@ -5,7 +5,6 @@ import requests
 from bs4 import BeautifulSoup
 import discord
 
-from keep_alive import keep_alive
 import database
 
 load_dotenv()
@@ -90,7 +89,6 @@ async def on_member_join(member):
   await channel.send(f'welcome {member.name}\n Newly added airdrops will be notified. If you want to see all the listed projects type "$all". For viewing the latest project type "$latest"')
 
 
-keep_alive()
 client.run(os.getenv('TOKEN'))
 
 
